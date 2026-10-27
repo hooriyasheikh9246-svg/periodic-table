@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Periodic Table</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="app-header">
+    <h1>Periodic Table of Elements</h1>
+  </header>
+
+  <main class="container">
+    <section class="controls-bar">
+      <div class="filter-group">
+        <span class="filter-label">Classification:</span>
+        <div class="btn-group" id="class-filters">
+          <button class="filter-btn" data-type="class" data-val="Metal">Metal</button>
+          <button class="filter-btn" data-type="class" data-val="Non-metal">Non-metal</button>
+          <button class="filter-btn" data-type="class" data-val="Metalloid">Metalloid</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Blocks:</span>
+        <div class="btn-group" id="block-filters">
+          <button class="filter-btn block-btn" data-type="block" data-val="s">s</button>
+          <button class="filter-btn block-btn" data-type="block" data-val="p">p</button>
+          <button class="filter-btn block-btn" data-type="block" data-val="d">d</button>
+          <button class="filter-btn block-btn" data-type="block" data-val="f">f</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Groups:</span>
+        <div class="btn-group group-numbers" id="group-filters">
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Periods:</span>
+        <div class="btn-group" id="period-filters">
+          <button class="filter-btn" data-type="period" data-val="1">1</button>
+          <button class="filter-btn" data-type="period" data-val="2">2</button>
+          <button class="filter-btn" data-type="period" data-val="3">3</button>
+          <button class="filter-btn" data-type="period" data-val="4">4</button>
+          <button class="filter-btn" data-type="period" data-val="5">5</button>
+          <button class="filter-btn" data-type="period" data-val="6">6</button>
+          <button class="filter-btn" data-type="period" data-val="7">7</button>
+          <button class="filter-btn" data-type="series" data-val="lanthanide">Lanthanides</button>
+          <button class="filter-btn" data-type="series" data-val="actinide">Actinides</button>
+        </div>
+      </div>
+
+      <button id="clear-filters-btn" class="clear-btn">Clear filters</button>
+    </section>
+
+    <div class="table-wrapper">
+      <div id="preview-card" class="preview-card">
+        <div class="preview-main">
+          <div class="preview-symbol-box">
+            <span id="prev-num" class="prev-num">1</span>
+            <span id="prev-symbol" class="prev-symbol">H</span>
+          </div>
+          <div class="preview-title">
+            <h2 id="prev-name">Hydrogen</h2>
+            <span id="prev-category" class="prev-cat-badge">Reactive Non-metal</span>
+          </div>
+        </div>
+        <div class="preview-details">
+          <div class="detail-row">
+            <span>Key isotopes:</span>
+            <strong id="prev-isotopes"><sup>1</sup>H, <sup>2</sup>H</strong>
+          </div>
+          <div class="detail-row">
+            <span>Electron configuration:</span>
+            <strong id="prev-config">1s¹</strong>
+          </div>
+          <div class="detail-row">
+            <span>Density:</span>
+            <strong id="prev-density">0.000089 g/cm³</strong>
+          </div>
+          <div class="detail-row">
+            <span>1st Ionisation energy:</span>
+            <strong id="prev-ionization">1312.0 kJ/mol</strong>
+          </div>
+          <div class="detail-row">
+            <span>Atomic mass:</span>
+            <strong id="prev-mass">1.008 u</strong>
+          </div>
+        </div>
+      </div>
+
+      <div id="periodic-table" class="periodic-table"></div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
